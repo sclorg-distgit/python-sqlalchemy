@@ -1,0 +1,12 @@
+diff -up SQLAlchemy-0.9.8/lib/sqlalchemy/util/langhelpers.py.orig SQLAlchemy-0.9.8/lib/sqlalchemy/util/langhelpers.py
+--- SQLAlchemy-0.9.8/lib/sqlalchemy/util/langhelpers.py.orig	2015-01-22 10:47:16.948319999 +0100
++++ SQLAlchemy-0.9.8/lib/sqlalchemy/util/langhelpers.py	2015-01-22 10:50:07.837466318 +0100
+@@ -26,7 +26,7 @@ from . import _collections
+ def md5_hex(x):
+     if compat.py3k:
+         x = x.encode('utf-8')
+-    m = hashlib.md5()
++    m = hashlib.md5(usedforsecurity=False)
+     m.update(x)
+     return m.hexdigest()
+ 
