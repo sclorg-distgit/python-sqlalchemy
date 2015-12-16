@@ -1,0 +1,11 @@
+--- lib/sqlalchemy/util/compat.py.orig	2014-01-17 10:34:34.055291819 +0100
++++ lib/sqlalchemy/util/compat.py	2014-01-17 10:34:46.639276008 +0100
+@@ -191,7 +191,7 @@
+ def md5_hex(x):
+     # Py3K
+     #x = x.encode('utf-8')
+-    m = _md5()
++    m = _md5(usedforsecurity=False)
+     m.update(x)
+     return m.hexdigest()
+ 
