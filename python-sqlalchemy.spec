@@ -4,7 +4,7 @@
 %global srcname SQLAlchemy
 
 Name:           %{?scl_prefix}python-sqlalchemy
-Version:        1.1.11
+Version:        1.1.13
 Release:        1%{?dist}
 Summary:        Modular and flexible ORM library for python
 
@@ -68,6 +68,10 @@ rm -rf %{buildroot}
 %{python3_sitearch}/*
 
 %changelog
+* Tue Aug 08 2017 Charalampos Stratakis <cstratak@redhat.com> - 1.1.13-1
+- Update to 1.1.13
+Resolves: rhbz#1479378
+
 * Mon Jun 19 2017 Charalampos Stratakis <cstratak@redhat.com> - 1.1.11-1
 - Update to 1.1.11 for rh-python36
 
